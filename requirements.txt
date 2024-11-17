@@ -1,0 +1,8 @@
+# Flask: Framework web para criar o servidor
+flask==2.3.3
+
+# Flask-CORS: Gerenciar permissões de CORS para requisições HTTP
+flask-cors==3.0.10
+
+# Dependências opcionais, caso sejam usadas pelo script tracker_logseq.py
+inotify==0.2.10

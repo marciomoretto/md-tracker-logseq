@@ -1,0 +1,12 @@
+[Unit]
+Description=Tag Search Service
+After=graphical-session.target
+
+[Service]
+ExecStart=/home/marciomr/MeusProgramas/sh/start_flask.sh
+Restart=on-failure
+Environment=DISPLAY=:0
+Environment=XDG_RUNTIME_DIR=/run/user/1000
+
+[Install]
+WantedBy=default.target

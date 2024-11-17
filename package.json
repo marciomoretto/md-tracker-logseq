@@ -1,0 +1,18 @@
+{
+  "name": "logseq-nautilus",
+  "version": "0.0.1",
+  "author": "Márcio Moretto Ribeiro",
+  "main": "index.html",
+  "description": "Abre uma pasta no Nautilus com os arquivos da página",
+  "license": "MIT",
+  "devDependencies": {
+    "@logseq/libs": "^0.0.1-alpha.29"
+  },
+  "browserslist": [
+    "chrome 80"
+  ],
+  "logseq": {
+    "id": "_edodonfur",
+    "icon": "logseq.png"
+  }
+}
