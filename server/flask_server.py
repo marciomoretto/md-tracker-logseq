@@ -40,7 +40,7 @@ def run_script():
     
     try:
         result = subprocess.run(
-            ["python3", script_path, file_path],
+            ["/opt/md-tracker-logseq/venv/bin/python3", script_path, file_path],
             capture_output=True,
             text=True,
             encoding="utf-8"

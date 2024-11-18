@@ -1,3 +1,3 @@
 #!/bin/bash
-source /home/marciomr/MeusProgramas/python/env/bin/activate
-python3 /home/marciomr/MeusProgramas/python/flask_server.py
+source /opt/md-tracker-logseq/venv/bin/activate
+/opt/md-tracker-logseq/venv/bin/python3 /opt/md-tracker-logseq/server/flask_server.py
