@@ -13,29 +13,24 @@ async function main() {
       // Obtém a página corrente
       const currentPage = await logseq.Editor.getCurrentPage();
 
-      pageName = currentPage?.originalName || "Unknown Page";
-
-      // Verifica se a página é um Journal (baseado na convenção de datas no nome)
-      if (currentPage?.journalDay) {
-        // Título do Journal com formatação
-        const journalDate = new Date(
-          parseInt(currentPage.journalDay, 10) * 1000 // Convertendo o Unix Timestamp
-        ).toLocaleDateString("pt-BR", {
-          year: "numeric",
-          month: "long",
-          day: "numeric",
-        });
-
-        pageName = `Journal - ${journalDate}`;
-      }
-
       if (!currentPage) {
         logseq.App.showMsg("❌ Nenhuma página encontrada");
         return;
-      }      
+      }
+
+      // Determina se é um Journal ou uma Page
+      let pageType = "page"; // Assume que é uma página padrão por default
+      let pageName = currentPage.originalName;
+
+      // Verifica se a página é um Journal (baseado na convenção de datas no nome)
+      if (currentPage?.journalDay) {
+        pageType = "journal";
+        const [day, month, year] = currentPage.originalName.split("-");
+        pageName = `${year}_${month}_${day}`;
+      }
 
       // URL para chamada HTTP
-      const url = `http://localhost:5000/run-script?pagename=${encodeURIComponent(pageName)}`;
+      const url = `http://localhost:5000/run-script?type=${pageType}&name=${encodeURIComponent(pageName)}`;
 
       try {
         // Faz a requisição HTTP

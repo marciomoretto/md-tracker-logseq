@@ -12,17 +12,17 @@ import argparse
 
 def show_help():
     print("Uso: python script.py FILE_PATH")
-    print("\nBusca arquivos associados a uma tag específica no Tracker e exibe-os em uma pasta temporária no Nautilus.")
+    print("\nBusca arquivos associados a uma link específico no Tracker e exibe-os em uma pasta temporária no Gnome Files.")
     print("\nArgumentos:")
     print("  FILE_PATH          Caminho para o arquivo.")
     print("\nExemplo de uso:")
-    print("  python script.py '~/Documentos/Vault/pages/O Justo - Ricoeur.md'")
+    print("  python link_search.py '~/Documentos/Vault/pages/O Justo - Ricoeur.md'")
     sys.exit()
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Script para buscar arquivos linkados no Tracker.")
     parser.add_argument("link", nargs="?", help="Caminho para o arquivo.")
-    parser.add_argument("--list-relations", action="store_true", help="Lista todas as relações entre arquivos e tags.")
+    parser.add_argument("--list-relations", action="store_true", help="Lista todas as relações entre arquivos.")
 
     return parser.parse_args()
 
