@@ -213,12 +213,12 @@ def main():
     create_links_with_hops(files_two_hop, temp_dir)
 
     time.sleep(1)
-    print("Conteúdo do diretório temporário antes de abrir no Nautilus:")
+    print("Conteúdo do diretório temporário antes de abrir o gerenciador de arquivos:")
     subprocess.run(["ls", "-l", temp_dir])
 
     if any(Path(temp_dir).iterdir()):
-        print(f"Abrindo pasta temporária no Nautilus: {temp_dir}")
-        subprocess.run(["nautilus", temp_dir])
+        print(f"Abrindo pasta temporária no gerenciador padrão: {temp_dir}")
+        subprocess.run(["xdg-open", temp_dir])
         time.sleep(5)  # Ajuste ou remova conforme necessário
     else:
         print(f"Nenhum arquivo encontrado. Removendo pasta temporária.")
