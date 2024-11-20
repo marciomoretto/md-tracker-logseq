@@ -2,7 +2,7 @@
 
 O MD Tracker Logseq Plugin é uma ferramenta que amplia as funcionalidades do Logseq, permitindo que você explore facilmente os arquivos relacionados à página atual. Ele funciona em conjunto com o [MD Tracker](https://github.com/marciomoretto/md-tracker), que monitora pastas de arquivos Markdown e cria links RDF no Tracker3 para associar arquivos referenciados.
 
-Com este plugin, basta um comando ou atalho no Logseq para abrir o GNOME Files (Nautilus) com todos os arquivos relacionados à página atual, direta ou indiretamente.
+Com este plugin, basta um comando ou atalho no Logseq para abrir o gerenciador padrão de arquivos com todos os arquivos relacionados à página atual, direta ou indiretamente.
 
 # Funcionalidade Principal
 1. Como funciona:
